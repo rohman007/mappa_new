@@ -688,6 +688,38 @@ section {
   padding: 0;
 }
 
+.about .icon-box {
+  padding: 30px 30px;
+  transition: all ease-in-out 0.4s;
+  position: relative;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
+  margin-top: 70px;
+}
+.about .icon {
+  margin-top: -74px;
+  left: -10px;
+  position: relative;
+}
+.about .icon-box h4 {
+  text-align: right;
+  font-weight: 800;
+  font-size: 35pt;
+  margin: 20px 0 0;
+  color: #222;
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+}
+.about .label-box {
+  position: absolute;
+  right: 20px;
+  top: 17px;
+  font-size: 15px;
+  color: #888;
+  font-weight: 600;
+}
+
 .about .content ul li {
   padding-left: 28px;
   position: relative;
@@ -732,192 +764,52 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Why Us
+# Map
 --------------------------------------------------------------*/
-.why-us .content {
-  padding: 60px 100px 0 100px;
-}
-
-.why-us .content h3 {
-  font-weight: 400;
-  font-size: 34px;
-  color: #37517e;
-}
-
-.why-us .content h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-top: 5px;
-}
-
-.why-us .content p {
-  font-size: 15px;
-  color: #848484;
-}
-
-.why-us .img {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.why-us .accordion-list {
-  padding: 0 100px 60px 100px;
-}
-
-.why-us .accordion-list ul {
-  padding: 0;
-  list-style: none;
-}
-
-.why-us .accordion-list li+li {
-  margin-top: 15px;
-}
-
-.why-us .accordion-list li {
-  padding: 20px;
-  background: #fff;
-  border-radius: 4px;
-}
-
-.why-us .accordion-list a {
-  display: block;
+section#map {
+  height: 100vh;
   position: relative;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-  padding-right: 30px;
-  outline: none;
-  cursor: pointer;
+}
+div#maps-view {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+div#maps-view iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
-.why-us .accordion-list span {
-  color: #47b2e4;
-  font-weight: 600;
-  font-size: 18px;
-  padding-right: 10px;
-}
 
-.why-us .accordion-list i {
-  font-size: 24px;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.why-us .accordion-list p {
-  margin-bottom: 0;
-  padding: 10px 0 0 0;
-}
-
-.why-us .accordion-list .icon-show {
-  display: none;
-}
-
-.why-us .accordion-list a.collapsed {
-  color: #343a40;
-}
-
-.why-us .accordion-list a.collapsed:hover {
-  color: #47b2e4;
-}
-
-.why-us .accordion-list a.collapsed .icon-show {
-  display: inline-block;
-}
-
-.why-us .accordion-list a.collapsed .icon-close {
-  display: none;
-}
-
-@media (max-width: 1024px) {
-
-  .why-us .content,
-  .why-us .accordion-list {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-@media (max-width: 992px) {
-  .why-us .img {
-    min-height: 400px;
-  }
-
-  .why-us .content {
-    padding-top: 30px;
-  }
-
-  .why-us .accordion-list {
-    padding-bottom: 30px;
-  }
-}
-
-@media (max-width: 575px) {
-  .why-us .img {
-    min-height: 200px;
-  }
-}
 
 /*--------------------------------------------------------------
-# Skills
+# Partner
 --------------------------------------------------------------*/
-.skills .content h3 {
-  font-weight: 700;
-  font-size: 32px;
-  color: #37517e;
+.partners {
+  padding: 12px 0;
+  text-align: center;
 }
 
-.skills .content ul {
-  list-style: none;
-  padding: 0;
+.partners img {
+  max-width: 45%;
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  padding: 15px 0;
+  filter: grayscale(100);
 }
 
-.skills .content ul li {
-  padding-bottom: 10px;
+.partners img:hover {
+  filter: none;
+  transform: scale(1.1);
 }
 
-.skills .content ul i {
-  font-size: 20px;
-  padding-right: 4px;
-  color: #47b2e4;
-}
-
-.skills .content p:last-child {
-  margin-bottom: 0;
-}
-
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
-}
-
-.skills .progress .skill {
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  color: #37517e;
-}
-
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-
-.skills .progress-bar-wrap {
-  background: #e8edf5;
-  height: 10px;
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: #4668a2;
+@media (max-width: 768px) {
+  .partners img {
+    max-width: 40%;
+  }
 }
 
 /*--------------------------------------------------------------
