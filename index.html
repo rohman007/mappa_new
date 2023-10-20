@@ -1,232 +1,784 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    
-    <!--====== Title ======-->
-    <title>Mappa.id</title>
-    <meta name="author" content="Ahmad Nurrohman">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	
-    <!--====== Favicon Icon ======-->
-	<link rel='icon' href="assets/images/favicon.png" type='image/x-icon'>
-	<link href="assets/images/ico.png" rel="apple-touch-icon">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+  <title>Mappa.id</title>
+  <meta name="author" content="Tim Mappa">
+  <meta name="description" content="Mappa berbagai Informasi GIS , Drone , Orthophoto  ">
+  <meta name="keywords" content="Mappa berbagai Informasi GIS , Drone , Orthophoto ">
 
-	<!--====== Font Google ======-->
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!--====== Font Google ======-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Roboto+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-        
-    <!--====== Bootstrap CSS ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     
-    
-    <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="assets/css/style.css?v=1.5">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
 
-<body class="home-page">
-    <!--====== NAVBAR START ======-->
+<body>
+  <section id="notification" class="text-center py-2">Selamat buat lutfi, 081316549997 sebagai kontributor mappa tembus 1 juta Ha.</section>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
 
-    <section class="navbar-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <nav class="navbar navbar-expand-lg">
-                       
-                        <a class="navbar-brand" href="#">
-                            <img src="assets/images/logo.png" alt="Logo">
-                        </a>
-                        
-                        
-                    </nav> <!-- navbar -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
+      <h1 class="logo me-auto"><a href="index.html"><img src="assets/img/logo.png"></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-    <!--====== NAVBAR TWO PART ENDS ======-->
-    
-    <!--====== SLIDER PART START ======-->
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Dashboard</a></li>
+          <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
+          <li><a class="nav-link scrollto" href="#">Upload Data</a></li>
+          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#partner">Partner</a></li>
+          <li><a class="nav-link scrollto" href="#map">Mappatile</a></li>
+          <li><a class="getstarted scrollto" href="https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=https%3A%2F%2Fmappa.id%2Fauth%2Fgoogle_login&client_id=269173757594-mgjhq8v6382icpk71beff3g2av4h6prf.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&access_type=online&approval_prompt=auto"><span class="material-symbols-outlined me-1">person</span>gLogin</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+        <button class="drone-icon border-0 bg-transparent ms-2"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <path d="M23.1667 8.66667H20.8333V6.33333H23.1667C23.4761 6.33333 23.7728 6.21042 23.9916 5.99162C24.2104 5.77283 24.3333 5.47609 24.3333 5.16667C24.3333 4.85725 24.2104 4.5605 23.9916 4.34171C23.7728 4.12292 23.4761 4 23.1667 4H16.1667C15.8572 4 15.5605 4.12292 15.3417 4.34171C15.1229 4.5605 15 4.85725 15 5.16667C15 5.47609 15.1229 5.77283 15.3417 5.99162C15.5605 6.21042 15.8572 6.33333 16.1667 6.33333H18.5V8.66667H9.16667V6.33333H11.5C11.8094 6.33333 12.1062 6.21042 12.325 5.99162C12.5437 5.77283 12.6667 5.47609 12.6667 5.16667C12.6667 4.85725 12.5437 4.5605 12.325 4.34171C12.1062 4.12292 11.8094 4 11.5 4H4.5C4.19058 4 3.89383 4.12292 3.67504 4.34171C3.45625 4.5605 3.33333 4.85725 3.33333 5.16667C3.33333 5.47609 3.45625 5.77283 3.67504 5.99162C3.89383 6.21042 4.19058 6.33333 4.5 6.33333H6.83333V8.66667H4.5C3.57174 8.66667 2.6815 9.03542 2.02513 9.69179C1.36875 10.3482 1 11.2384 1 12.1667C1 13.0949 1.36875 13.9852 2.02513 14.6415C2.6815 15.2979 3.57174 15.6667 4.5 15.6667H6.95C7.13694 16.56 7.53273 17.3964 8.105 18.1073C6.76651 18.3551 5.5568 19.0631 4.68537 20.1088C3.81393 21.1546 3.33565 22.4721 3.33333 23.8333C3.33333 24.1428 3.45625 24.4395 3.67504 24.6583C3.89383 24.8771 4.19058 25 4.5 25C4.80942 25 5.10616 24.8771 5.32496 24.6583C5.54375 24.4395 5.66667 24.1428 5.66667 23.8333C5.66667 22.9051 6.03542 22.0148 6.69179 21.3585C7.34817 20.7021 8.23841 20.3333 9.16667 20.3333H12.6667V22.6667C12.6667 22.9761 12.7896 23.2728 13.0084 23.4916C13.2272 23.7104 13.5239 23.8333 13.8333 23.8333C14.1428 23.8333 14.4395 23.7104 14.6583 23.4916C14.8771 23.2728 15 22.9761 15 22.6667V20.3333H18.5C19.4283 20.3333 20.3185 20.7021 20.9749 21.3585C21.6313 22.0148 22 22.9051 22 23.8333C22 24.1428 22.1229 24.4395 22.3417 24.6583C22.5605 24.8771 22.8572 25 23.1667 25C23.4761 25 23.7728 24.8771 23.9916 24.6583C24.2104 24.4395 24.3333 24.1428 24.3333 23.8333C24.331 22.4719 23.8525 21.1543 22.9809 20.1085C22.1092 19.0628 20.8992 18.3548 19.5605 18.1073C20.1332 17.3965 20.5294 16.5601 20.7167 15.6667H23.1667C24.0949 15.6667 24.9852 15.2979 25.6415 14.6415C26.2979 13.9852 26.6667 13.0949 26.6667 12.1667C26.6667 11.2384 26.2979 10.3482 25.6415 9.69179C24.9852 9.03542 24.0949 8.66667 23.1667 8.66667ZM23.1667 13.3333H19.6667C19.3572 13.3333 19.0605 13.4562 18.8417 13.675C18.6229 13.8938 18.5 14.1906 18.5 14.5C18.5 15.4283 18.1313 16.3185 17.4749 16.9749C16.8185 17.6313 15.9283 18 15 18H12.6667C11.7384 18 10.8482 17.6313 10.1918 16.9749C9.53541 16.3185 9.16667 15.4283 9.16667 14.5C9.16667 14.1906 9.04375 13.8938 8.82496 13.675C8.60616 13.4562 8.30942 13.3333 8 13.3333H4.5C4.19058 13.3333 3.89383 13.2104 3.67504 12.9916C3.45625 12.7728 3.33333 12.4761 3.33333 12.1667C3.33333 11.8572 3.45625 11.5605 3.67504 11.3417C3.89383 11.1229 4.19058 11 4.5 11H23.1667C23.4761 11 23.7728 11.1229 23.9916 11.3417C24.2104 11.5605 24.3333 11.8572 24.3333 12.1667C24.3333 12.4761 24.2104 12.7728 23.9916 12.9916C23.7728 13.2104 23.4761 13.3333 23.1667 13.3333ZM16.1667 14.5C16.1667 15.1188 15.9208 15.7123 15.4832 16.1499C15.0457 16.5875 14.4522 16.8333 13.8333 16.8333C13.2145 16.8333 12.621 16.5875 12.1834 16.1499C11.7458 15.7123 11.5 15.1188 11.5 14.5C11.5039 14.2694 11.5433 14.0408 11.6167 13.8222C11.6932 13.9958 11.8109 14.1481 11.9596 14.2659C12.1083 14.3838 12.2834 14.4636 12.4699 14.4984C12.6564 14.5333 12.8486 14.5221 13.0298 14.4659C13.211 14.4097 13.3758 14.3102 13.5098 14.1759C13.6439 14.0417 13.7431 13.8768 13.7991 13.6955C13.855 13.5142 13.8658 13.322 13.8307 13.1356C13.7956 12.9491 13.7155 12.7741 13.5974 12.6256C13.4794 12.4771 13.3269 12.3596 13.1532 12.2833C13.3728 12.2106 13.602 12.1712 13.8333 12.1667C14.4522 12.1667 15.0457 12.4125 15.4832 12.8501C15.9208 13.2877 16.1667 13.8812 16.1667 14.5Z" fill="white"/>
+          </svg></button>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
 
-    <section id="banner-home" class="slider_area">
-		<div id="particles-js"></div>
-		<div class="container">
-			<div class="row">				
-				<!-- <div class="col-sm-5 text-center">
-					<div id="slide-image">
-						<img src="assets/images/kaaba.webp" alt="slide-image">
-					</div>
-				</div> -->
-				<div class="col-sm-6 text-left">
-					<div class="slider-content">
-						<h2 class="title">Your map <br/>
-							energize the nation. <br/>
-							<span>Share it!</span></h2>
-						<p class="text">Petamu, energi untuk negeri.<br/>
-							Yuk Bagikan</p>
-						<div class="slider-btn">
-							<ul>
-								<li><a class="solid page-scroll" href="https://mappa.id/main/upload/">Upload Data</a></li>
-								<li><a class="solid border-button" href="#peta-block">Dapatkan Info</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> <!-- container -->
-    </section>
+    </div>
+  </header><!-- End Header -->
 
-    <!--====== SLIDER PART ENDS ======-->
-    
-	<section id="first-block" class="intro-fitur">
-        <div class="container">
-            <div class="row justify-content-center">
-				<div class="col-md-5 text-center">
-                    <div class="section-title text-left pb-10">
-						<h4 class="subtitle">About Us</h4>
-                        <h3 class="title" style="margin-bottom:30px">Tentang <b>Mappa.id</b></h3>
-                    </div>
-				</div>
-				<div class="col-md-7">
-					<p>Mappa.id adalah platform yang menyediakan jasa bagi orang-orang yang ingin membagi tempat hiburan, makanan, pemandangan dll yang pernah dikunjungi untuk diketahui oleh lebih banyak orang dalam bentuk peta.</p>
-					<p>Cukup dengan klik tomobl dibawah anda akan diarahkan ke tempat yang belum anda ketahui.</p><br/>
-					<a href="#peta-block" class="btn btn-default btn-primary">Mulai Menjelajah</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="fitur-warning">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-12 col-md-12">
-					<div class="row justify-content-center">
-						<div class="col-md-3 col-sm-4 col-xs-12 benefit-item">
-							<div class="benefit-description single-features " >
-								<i class="glyphicon glyphicon-map-marker"></i>
-								<div class="benefit-title"><span>1817</span><br/>Lokasi</div>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-4 col-xs-12 benefit-item">
-							<div class="benefit-description single-features " >
-								<i class="glyphicon glyphicon-thumbs-up"></i>
-								<div class="benefit-title"><span>505</span><br/>Kontributor</div>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-4 col-xs-12 benefit-item">
-							<div class="benefit-description single-features " >
-								<i class="glyphicon glyphicon-user"></i>
-								<div class="benefit-title"><span>6,560</span><br/>Pengunjung</div>
-							</div>
-						</div>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
 
-					</div> <!-- row -->
-				</div> 
-			
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-    <section id="notes">
-		<div class="container">
-			<div class="notes-block">
-				<p>Mappa mengucapkan banyak terimakasih kepada seluruh pengunjung yang telah berkenan untuk share tempat menarik .</p>
-				Catatan:
-				Segala bentuk informasi tanggung jawab kontributor.
-				Backup data sepenuhnya ada di kontributor.
-				</div>
-		</div>
-    </section>
-    <section id="peta-block">
-		<div id="data-lokasi">
-		<h2>Lokasi Rekomendasi </h2>
-		<table class="table"><thead><tr><th width="30px">No</th><th>Lokasi </th><th width="20px">Nilai</th></tr><tr></tr></thead><tbody><tr><td>1</td><td><a style="color:#00F" href="https://mappa.id/main/landing/1647220696177" target="1647220696177">Program 200 Ribu Pohon Alpukat, Hujungtiwu, Panjalu, Ciamis <img src="https://mappa.id/main/clustering/jpg/maps__images__ytb.jpg" width="15px"></a></td><td align="right"> 142</td></tr><tr>
-</tr><tr><td>2</td><td><a style="color:#00F" href="https://mappa.id/main/landing/1647220696175" target="1647220696175">Prambanan , Boko Harjo, Prambanan, Klaten <img src="https://mappa.id/main/clustering/jpg/maps__images__ytb.jpg" width="15px"></a></td><td align="right"> 57</td></tr><tr>
-</tr><tr><td>3</td><td><a style="color:#00F" href="https://mappa.id/main/landing/1647930687198" target="1647930687198">Lumbung Kerep (52928_34160), Lumbung Kerep, Wonosari, Klaten (Full GCP)<img src="https://mappa.id/main/clustering/png/maps__images__UAV.png" width="15px"></a></td><td align="right"> 49</td></tr><tr>
-</tr><tr><td>4</td><td><a style="color:#00F" href="https://mappa.id/main/landing/1647778831165" target="1647778831165">Cikiwul (52246_33925), Cikiwul, Bantargebang, Bekasi (Full GCP 2019)<img src="https://mappa.id/main/clustering/png/maps__images__UAV.png" width="15px"></a></td><td align="right"> 43</td></tr><tr>
-</tr><tr><td>5</td><td><a style="color:#00F" href="https://mappa.id/main/landing/1648103118112" target="1648103118112">Selo Martani (52875_34179), Selo Martani, Kalasan, Sleman ( Tahun 2015, Full GCP)<img src="https://mappa.id/main/clustering/png/maps__images__UAV.png" width="15px"></a></td><td align="right"> 35</td></tr><tr>
-</tr><tr><td>6</td><td><a style="color:#00F" href="https://mappa.id/main/landing/1647694228175" target="1647694228175">Balong Gebang (53152_34143), Balong Gebang, Gondang, Nganjuk (Full GCP)<img src="https://mappa.id/main/clustering/png/maps__images__UAV.png" width="15px"></a></td><td align="right"> 29</td></tr><tr>
-</tr><tr><td>7</td><td><a style="color:#00F" href="https://mappa.id/main/landing/1647769533104" target="1647769533104">Kebun Alpukat Panjalu (52474_34062), Hujungtiwu, Panjalu, Ciamis<img src="https://mappa.id/main/clustering/png/maps__images__TKP.png" width="15px"></a></td><td align="right"> 27</td></tr><tr>
-</tr><tr><td>8</td><td><a style="color:#00F" href="https://mappa.id/main/landing/1647220696181" target="1647220696181">Toko Darsiti - Tengah Tol KM 255,4 , Ranca Wuluh, Bulak Kamba, Brebes <img src="https://mappa.id/main/clustering/jpg/maps__images__ytb.jpg" width="15px"></a></td><td align="right"> 26</td></tr><tr>
-</tr><tr><td>9</td><td><a style="color:#00F" href="https://mappa.id/main/landing/1647762346171" target="1647762346171">Nagara (52116_33897), Nagara, Kibin, Serang ( Full GCP)<img src="https://mappa.id/main/clustering/png/maps__images__UAV.png" width="15px"></a></td><td align="right"> 23</td></tr><tr>
-</tr><tr><td>10</td><td><a style="color:#00F" href="https://mappa.id/main/landing/1648171022172" target="1648171022172">Cipinang (52179_33940), Cipinang, Rumpin, Bogor<img src="https://mappa.id/main/clustering/png/maps__images__UAV.png" width="15px"></a></td><td align="right"> 22</td></tr><tr>
-</tr><tr><td>11</td><td><a style="color:#00F" href="https://mappa.id/main/landing/1647398679156" target="1647398679156">Tanjung Mas Mulya (51992_33491), Kota Terpadu Mandiri (KTM) Kawasan Transmigrasi 2019<img src="https://mappa.id/main/clustering/png/maps__images__UAV.png" width="15px"></a></td><td align="right"> 20</td></tr><tr>
-</tr></tbody></table>
-		</div>
-		<div id="peta-frame"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126646.2090268327!2d112.64264307380618!3d-7.275614072051526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbf8381ac47f%3A0x3027a76e352be40!2sSurabaya%2C%20Kota%20SBY%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1648817360454!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-    </section>
-    <section id="full-banner" class="content-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-					<div class="section-title text-center pb-25">
-						<h3 class="title">Siapapun bisa menjadi <b>kontributor</b><br/>Ingin berbagi lokasi menarik disekitar anda?</h3>
-					</div>
-                    <a href="#pricing" class="btn btn-primary page-scroll" data-original-title="" title="" style="margin-top:15px;">Upload Sekarang</a>
-                </div>
-            </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 text-white" data-aos="fade-up" data-aos-delay="200">
+          <h1>YOUR MAP<br/>
+            ENERGIZE THE NATION.<br/>
+            <span>SHARE IT!</span>
+          </h1>
+          <p class="text">Petamu, energi untuk negeri.<br>
+            Yuk Bagikan</p>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#" class="btn btn-primary">Upload Data</a>
+            <a href="#" class="btn btn-outline">Dapatkan Info</a>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
 
-    
-    <!--====== BACK TOP TOP PART START ======-->
+  </section><!-- End Hero -->
 
-    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+  <main id="main">
 
-    <!--====== BACK TOP TOP PART ENDS ======-->    
+    <!-- ======= Call Section ======= -->
+    <section id="call" class="calls section-bg py-3">
+      <div class="container">
 
+        <div class="row" data-aos="fade-up">
 
-    <!--====== Jquery js ======-->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    
-    
-    <!--====== Scrolling Nav js ======-->
-    <script src="assets/js/jquery.easing.min.js"></script>
-    <script src="assets/js/scrolling-nav.js"></script>
-	<script src="assets/js/app.js"></script>
-     
-    <!--====== Main js ======-->
-    <script src="assets/js/main.js?v=1"></script>
-	<script>
-	$(function() {
-		$('#slide-services').owlCarousel({
-			loop:false,
-			margin:25,
-			autoWidth:true,
-			nav:false,
-			dots:false,
-			autoplay:false,
-			items:3,
-			navText: ['<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>', '<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
-		})
-		$('.slide-client').owlCarousel({
-			loop:true,
-			margin:0,
-			nav:false,
-			dots:false,
-			autoplay:true,
-			items:6,
-			navText: ['<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>', '<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
-		})
-		$('#slide-testi').owlCarousel({
-			center: true,
-			items:2,
-			nav:false,
-			dots:false,
-			loop:true,
-			margin:10,
-		})
-		$('.collapse-block').on('click', function(){
-			$('.collapse-block').toggleClass('active');
-		});
-	});
-	</script>
+          <div class="col-12">
+            <div class="d-flex align-items-center justify-content-between">
+              <h2 class="mb-0">Jangan ragu untuk berdiskusi bersama kami jika Anda memerlukan bantuan</h2>
+              <a href="https://api.whatsapp.com/send?phone=6281319640604&text=Hallo,..." class="btn btn-primary"><img src="assets/img/wa-icon.png" class="me-1">Contact Us</a>
+            </div>            
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cliens Section -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row content">
+          <div class="col-sm-5 image-about">
+            <img class="w-100" src="assets/img/about-image.jpg">
+          </div>
+          <div class="col-sm-7 ps-sm-5">
+            <h2>Tentang MAPPA ID</h2>
+            <p>Mappa ID, platform open source untuk semua kalangan. Kami menyediakan ruang berbagi terutama data peta drone ortho dengan tujuan dapat dimanfaatkan untuk banyak pihak.</p>
+            <p>Menjadi kontributor Mappa.id adalah caramu mengkinikan Indonesia. Tunggu apalagi? Yuk sekarang!</p>
+            <p>Silahkan ikuti petunjuknya. Klik tombol dibawah, selamat menjelajahi tanah air.</p>
+            <p>Bagikan pengalamanmu ke teman-teman.</p>
+            <a href="#map" class="btn btn-primary">Mulai Menjelajah</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+            <div class="content">
+              <h3>Eum ipsam laborum deleniti <strong>velit pariatur architecto aut nihil</strong></h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+              </p>
+            </div>
+
+            <div class="accordion-list">
+              <ul>
+                <li>
+                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                    <p>
+                      Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                    </p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/why-us.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/skills.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+            <h3>Voluptatem dignissimos provident quasi corporis voluptates</h3>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+
+            <div class="skills-content">
+
+              <div class="progress">
+                <span class="skill">HTML <i class="val">100%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">CSS <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">JavaScript <i class="val">75%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">Photoshop <i class="val">55%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4><a href="">Lorem Ipsum</a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4><a href="">Sed ut perspici</a></h4>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4><a href="">Magni Dolores</a></h4>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-layer"></i></div>
+              <h4><a href="">Nemo Enim</a></h4>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Call To Action</h3>
+            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Call To Action</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-app">App</li>
+          <li data-filter=".filter-card">Card</li>
+          <li data-filter=".filter-web">Web</li>
+        </ul>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Web 2</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 3</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 1</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 3</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Team</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Walter White</h4>
+                <span>Chief Executive Officer</span>
+                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Sarah Jhonson</h4>
+                <span>Product Manager</span>
+                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>William Anderson</h4>
+                <span>CTO</span>
+                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Amanda Jepson</h4>
+                <span>Accountant</span>
+                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Pricing</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>Free Plan</h3>
+              <h4><sup>$</sup>0<span>per month</span></h4>
+              <ul>
+                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+                <li class="na"><i class="bx bx-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                <li class="na"><i class="bx bx-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+              </ul>
+              <a href="#" class="buy-btn">Get Started</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="box featured">
+              <h3>Business Plan</h3>
+              <h4><sup>$</sup>29<span>per month</span></h4>
+              <ul>
+                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+                <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
+                <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
+              </ul>
+              <a href="#" class="buy-btn">Get Started</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="box">
+              <h3>Developer Plan</h3>
+              <h4><sup>$</sup>49<span>per month</span></h4>
+              <ul>
+                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+                <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
+                <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
+              </ul>
+              <a href="#" class="buy-btn">Get Started</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>
+                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="500">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Arsha</h3>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
