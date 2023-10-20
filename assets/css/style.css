@@ -870,7 +870,7 @@ div#maps-view iframe {
 # Frequently Asked Questions
 --------------------------------------------------------------*/
 .faq .faq-list {
-  padding: 0 100px;
+  padding: 0 0px;
 }
 
 .faq .faq-list ul {
@@ -883,19 +883,21 @@ div#maps-view iframe {
 }
 
 .faq .faq-list li {
-  padding: 20px;
+  padding: 21px 25px;
   background: #fff;
-  border-radius: 4px;
+  border-radius: 8px;
   position: relative;
+  border: 1px solid #e5e5e5 !important;
 }
 
-.faq .faq-list a {
+.faq .faq-list li > a {
   display: block;
   position: relative;
   font-size: 16px;
   line-height: 24px;
+  color:#A2A9B0;
   font-weight: 500;
-  padding: 0 30px;
+  padding: 0;
   outline: none;
   cursor: pointer;
 }
@@ -921,24 +923,38 @@ div#maps-view iframe {
   padding: 10px 0 0 0;
 }
 
+.faq-heading h3 {
+    color: #000;
+    font-size: 28pt !important;
+}
+.faq-heading {
+  margin-bottom: 30px;
+}
+.faq-heading div {
+  color: #1447A8;
+}
 .faq .faq-list .icon-show {
   display: none;
 }
 
 .faq .faq-list a.collapsed {
-  color: #37517e;
+  color:#A2A9B0;
   transition: 0.3s;
 }
 
-.faq .faq-list a.collapsed:hover {
+.faq-list li > div {
+  font-size: 15px;
+}
+
+.faq .faq-list li > a.collapsed:hover {
   color: #47b2e4;
 }
 
-.faq .faq-list a.collapsed .icon-show {
+.faq .faq-list li > a.collapsed .icon-show {
   display: inline-block;
 }
 
-.faq .faq-list a.collapsed .icon-close {
+.faq .faq-list li > a.collapsed .icon-close {
   display: none;
 }
 
