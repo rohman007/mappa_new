@@ -12,6 +12,7 @@
 body {
   font-family: "Poppins", sans-serif;
   color: #444444;
+  position: relative;
 }
 
 .btn {
@@ -120,7 +121,7 @@ h6 {
 
 #header.header-scrolled,
 #header.header-inner-pages {
-  background: rgba(40, 58, 90, 0.9);
+  background:rgb(43 79 146 / 95%);
   top:0;
   padding: 15px 0 ;
 }
@@ -146,6 +147,10 @@ h6 {
 #header .logo img {
   max-height: 65px;
   transition: 0.3s;
+}
+@media(max-width:767px){
+  #header .logo img{height: 55px;}
+  #header{padding-top: 70px;}
 }
 
 /*--------------------------------------------------------------
@@ -353,10 +358,11 @@ h6 {
   color: #47b2e4;
 }
 
-.navbar-mobile .getstarted,
+.navbar-mobile .getstarted, 
 .navbar-mobile .getstarted:focus {
   margin: 15px;
-  color: #37517e;
+  color: #fff;
+  justify-content: start;
 }
 
 .navbar-mobile .dropdown ul {
@@ -529,9 +535,9 @@ section#notification {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
+    font-size: 25pt;
+    line-height: normal;
+}
 
   #hero h2 {
     font-size: 18px;
@@ -541,6 +547,11 @@ section#notification {
 
   #hero .hero-img img {
     width: 70%;
+  }
+  #hero .btn {
+    margin: 0 auto 14px;
+    display: block;
+    width: 90%;
   }
 }
 
@@ -588,6 +599,21 @@ section#call .btn {
 }
 section#call .btn:hover {
   background: #ddd;
+}
+@media(max-width:767px){
+  section#call {
+    text-align: center;
+  }
+  section#call {
+    text-align: center;
+    padding: 30px 10px !important;
+  }
+  section#call h2 {
+    margin-bottom: 20px !important;
+  }
+  section#call .btn {
+    display: inline-block;
+  }
 }
 
 
@@ -663,7 +689,7 @@ section {
   font-weight: 800;
   color: #222;
   margin-top: 10px;
-  font-size: 28pt;
+  font-size: 33pt;
 }
 
 .image-about img {
@@ -699,14 +725,14 @@ section {
   margin-top: 100px;
 }
 .about .icon {
-  margin-top: -74px;
+  margin-top: -64px;
   left: -10px;
   position: relative;
 }
 .about .icon-box h4 {
   text-align: right;
   font-weight: 800;
-  font-size: 35pt;
+  font-size: 33pt;
   margin: 20px 0 0;
   color: #222;
   font-family: "Poppins", sans-serif;
@@ -714,8 +740,8 @@ section {
 }
 .about .label-box {
   position: absolute;
-  right: 20px;
-  top: 17px;
+  right: 30px;
+  top: 20px;
   font-size: 15px;
   color: #888;
   font-weight: 600;
@@ -757,11 +783,54 @@ section {
   margin-top: 6px;
   border: 2px solid #47b2e4;
 }
-
+.about .icon-box svg {
+  width: 70px;
+  height: 70px;
+}
 .about .content .btn-learn-more:hover {
   background: #47b2e4;
   color: #fff;
   text-decoration: none;
+}
+@media(max-width:767px){
+  .about .icon-box {
+    padding: 30px 20px 20px;
+    margin-top: 80px;
+  }
+  .about h2 {
+    margin-top: 0;
+    font-size: 29pt;
+  } 
+  .about .icon {
+    margin-top: -64px;
+    left: 0;
+    position: relative;
+    text-align: center;
+  }
+  .about .icon-box h4 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 20pt;
+    margin: 15px 0 0;
+    color: #222;
+    font-family: "Poppins", sans-serif;
+    line-height: 1;
+  }
+  .about .label-box {
+    position: relative;
+    top: 0;
+    right: 0;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 7px;
+  }
+  .about .icon-box svg {
+    width: 60px;
+    height: 70px;
+  }
+  .image-about {
+    display: none;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -818,7 +887,7 @@ div#maps-view iframe {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../img/cta-bg.jpg") fixed center center;
+  background:linear-gradient(rgb(11 50 123 / 80%), rgb(11 23 46 / 90%)), url(../img/cta-bg.jpg) fixed center center;
   background-size: cover;
   padding: 120px 0;
 }
@@ -837,7 +906,8 @@ div#maps-view iframe {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   padding: 12px 40px;
   border-radius: 50px;
   transition: 0.5s;
@@ -855,6 +925,17 @@ div#maps-view iframe {
 @media (max-width: 1024px) {
   .cta {
     background-attachment: scroll;
+  }
+}
+
+@media (max-width: 767px) {
+  .cta h3 {
+    color: #fff;
+    font-size: 24pt;
+    font-weight: 700;
+  }
+  .cta .cta-btn {
+    display: inline-block;
   }
 }
 
@@ -895,7 +976,7 @@ div#maps-view iframe {
   position: relative;
   font-size: 16px;
   line-height: 24px;
-  color:#A2A9B0;
+  color:#666;
   font-weight: 500;
   padding: 0;
   outline: none;
@@ -925,7 +1006,7 @@ div#maps-view iframe {
 
 .faq-heading h3 {
     color: #000;
-    font-size: 28pt !important;
+    font-size: 33pt !important;
 }
 .faq-heading {
   margin-bottom: 30px;
@@ -938,7 +1019,7 @@ div#maps-view iframe {
 }
 
 .faq .faq-list a.collapsed {
-  color:#A2A9B0;
+  color:#666;
   transition: 0.3s;
 }
 
@@ -947,7 +1028,7 @@ div#maps-view iframe {
 }
 
 .faq .faq-list li > a.collapsed:hover {
-  color: #47b2e4;
+  color: #000;
 }
 
 .faq .faq-list li > a.collapsed .icon-show {
@@ -962,6 +1043,14 @@ div#maps-view iframe {
   .faq .faq-list {
     padding: 0;
   }
+}
+@media(max-width:767px){
+  .faq-heading h3 {
+    font-size: 28pt !important;
+  }
+  .faq .faq-list li > a {
+    padding-right: 30px;
+}
 }
 
 /*--------------------------------------------------------------
@@ -1160,7 +1249,11 @@ div#maps-view iframe {
 --------------------------------------------------------------*/
 #footer {
   font-size: 14px;
-  background: #1447A8;
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
 }
 
 #footer .footer-bottom {
@@ -1170,7 +1263,7 @@ div#maps-view iframe {
 }
 
 #footer .copyright {
-  text-align: center;
+  text-align: left;
   /* color: transparent; */
 }
 
