@@ -115,8 +115,9 @@ h6 {
 #header {
   transition: all 0.5s;
   z-index: 997;
-  padding: 55px 0 15px;
-  top:0px
+  padding: 25px 0 15px;
+  top: 0px;
+  position: absolute;
 }
 
 #header.header-scrolled,
@@ -124,6 +125,7 @@ h6 {
   background:rgb(43 79 146 / 95%);
   top:0;
   padding: 15px 0 ;
+  position: fixed;
 }
 
 #header .logo {
@@ -150,7 +152,6 @@ h6 {
 }
 @media(max-width:767px){
   #header .logo img{height: 55px;}
-  #header{padding-top: 70px;}
 }
 
 /*--------------------------------------------------------------
@@ -793,6 +794,10 @@ section {
   text-decoration: none;
 }
 @media(max-width:767px){
+  section#about {
+      padding-left: 10px;
+      padding-right: 10px;
+  }
   .about .icon-box {
     padding: 30px 20px 20px;
     margin-top: 80px;
@@ -971,12 +976,15 @@ div#maps-view iframe {
   border: 1px solid #e5e5e5 !important;
 }
 
+.faq .faq-list li a {
+  word-wrap: break-word;
+}
 .faq .faq-list li > a {
   display: block;
   position: relative;
   font-size: 16px;
   line-height: 24px;
-  color:#666;
+  color:#222;
   font-weight: 500;
   padding: 0;
   outline: none;
@@ -1019,7 +1027,7 @@ div#maps-view iframe {
 }
 
 .faq .faq-list a.collapsed {
-  color:#666;
+  color:#222;
   transition: 0.3s;
 }
 
@@ -1045,12 +1053,38 @@ div#maps-view iframe {
   }
 }
 @media(max-width:767px){
+  section#faq {
+    padding-left: 10px;
+    padding-right: 10px;
+}
   .faq-heading h3 {
     font-size: 28pt !important;
   }
   .faq .faq-list li > a {
     padding-right: 30px;
 }
+}
+
+/*--------------------------------------------------------------
+# Modal Iklan
+--------------------------------------------------------------*/
+.modal button.btn-close {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  z-index: 1;
+}
+.modal-body {
+  padding: 0;
+}
+.modal-dialog {
+  width: 1000px;
+  max-width: 90%;
+}
+@media(max-width:767px) {
+  .modal-dialog {
+    margin: 0 auto;
+  }
 }
 
 /*--------------------------------------------------------------
