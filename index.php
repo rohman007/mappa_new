@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,21 +17,86 @@
 
   <!--====== Font Google ======-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Roboto+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Roboto+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css?v=11" rel="stylesheet">
+  <link href="assets/css/style.css?v=1" rel="stylesheet">
 
 </head>
-
 <body>
+<?php
+
+if(isset($_POST['simpan'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $nohp = $_POST['nohp'];
+    $message = $_POST['message'];
+
+    // Include file PHPMailer
+    require 'PHPMailer/class.phpmailer.php';
+    require 'PHPMailer/class.smtp.php';
+
+    // Buat objek PHPMailer
+    $mail = new PHPMailer;
+
+    // Konfigurasi SMTP
+    $mail->isSMTP();
+    $mail->SMTPDebug = 0; // 0 untuk non-debug, ganti dengan 2 untuk debugging
+    $mail->Host = 'mail.selembardaun.com'; // Ganti dengan server SMTP Anda
+    $mail->SMTPAuth = true;
+    $mail->Username = 'noreply@selembardaun.com'; // Ganti dengan alamat email Anda
+    $mail->Password = '!u@&vRN(jgNF'; // Ganti dengan kata sandi email Anda
+    $mail->SMTPSecure = 'ssl'; // Anda dapat menggunakan 'tls' atau 'ssl' tergantung pada kebutuhan
+    $mail->Port = 465; // Ganti dengan port SMTP yang sesuai
+
+    // Set alamat email pengirim
+    $mail->setFrom('noreply@selembardaun.com', 'MAPPA.ID');
+
+    // Tambahkan alamat email penerima
+    $mail->addAddress('a.nurrohman007@gmail.com', 'Nama Penerima');
+
+    // Subjek email
+    $mail->Subject = 'Pesan dari Kontak Form MAPPA.ID';
+
+    // Isi pesan email
+    // $mail->Body = 'Isi Pesan Email';
+    $mail->MsgHTML("
+    <b>Nama:</b><br/>
+    $name<br/><br/>
+    <b>Email:</b><br/>
+    $email<br/><br/>
+    <b>Nomor Telepon:</b><br/>
+    $nohp<br/><br/>
+    <b>Pesan:</b><br/>
+    $message
+	");
+
+    // Kirim email
+    if ($mail->send()) {
+        echo "
+        <script>
+           Swal.fire(
+            'Success',
+            'Pesan telah berhasil terkirim.',
+            'success'
+          ).then((result) => {
+              if (result.value) {
+               window.location.href = 'index.php'
+              }
+          });
+        </script>";
+    } else {
+        echo 'Email gagal terkirim. Error: ' . $mail->ErrorInfo;
+    }
+}
+?>
   <section id="notification" class="text-center py-2 px-4">Selamat buat lutfi, 081316549997 sebagai kontributor mappa tembus 1 juta Ha.</section>
   <!-- ======= Header ======= -->
   
@@ -47,9 +113,9 @@
           <li><a class="nav-link scrollto active" href="#hero">Dashboard</a></li>
           <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
           <li><a class="nav-link scrollto" href="#">Upload Data</a></li>
-          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
-          <li><a class="nav-link scrollto" href="#partner">Partner</a></li>
           <li><a class="nav-link scrollto" href="#map">Mappatile</a></li>
+          <li><a class="nav-link scrollto" href="#partner">Partner</a></li>
+          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a class="getstarted scrollto" href="https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=https%3A%2F%2Fmappa.id%2Fauth%2Fgoogle_login&client_id=269173757594-mgjhq8v6382icpk71beff3g2av4h6prf.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&access_type=online&approval_prompt=auto"><span class="material-symbols-outlined me-1">person</span>gLogin</a></li>
         </ul>
@@ -273,32 +339,31 @@
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section-bg">
       <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
         <div class="row">
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="col-md-4">
+                <div class="section-title">
+                    <h2>Contact</h2>
+                    <p class="text-muted">Kami Siap Membantu Anda dengan Informasi yang Anda Butuhkan.</p>
+                </div>
+            </div>
+          <div class="col-md-8 mt-0 mt-md-0 d-flex align-items-stretch">
+            <form action="" method="post" role="form" class="php-email-form">
               <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
+                <div class="form-group col-md-4">
+                  <label for="name">Nama</label>
                   <input type="text" name="name" class="form-control" id="name" required>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
+                <div class="form-group col-md-4">
+                  <label for="name">Email</label>
                   <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+                <div class="form-group col-md-4">
+                <label for="name">Nomor Telepon</label>
+                <input type="text" class="form-control" name="nohp" id="nohp" required>
                 </div>
               </div>
               <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
+                <label for="name">Pesan</label>
                 <textarea class="form-control" name="message" rows="10" required></textarea>
               </div>
               <div class="my-3">
@@ -306,7 +371,7 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-start"><input class="btn btn-primary mt-0 px-5" type="submit" name="simpan" value="Submit" id="butsave"></div>
             </form>
           </div>
 
@@ -361,11 +426,12 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="assets/js/jquery.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js?v=1"></script>
+  <script src="assets/js/main.js"></script>
   <script>
     const myButton = document.getElementById('droneButton');
     const myModal  = document.getElementById('iklanModal');
