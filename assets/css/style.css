@@ -271,6 +271,18 @@ h6 {
   visibility: hidden;
 }
 
+.indonesia-flag img {
+  width: 35px !important;
+  height: 21px;
+  display: block;
+}
+.indonesia-flag {
+  position: relative;
+  right: 0;
+  width: 35px;
+  margin-left: 10px;
+}
+
 .navbar .dropdown .dropdown:hover>ul {
   opacity: 1;
   top: 0;
@@ -307,6 +319,7 @@ h6 {
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
+    margin: 0 10px;
   }
 
   .navbar ul {
@@ -1049,28 +1062,50 @@ div#maps-view iframe {
 /*--------------------------------------------------------------
 # Modal Iklan
 --------------------------------------------------------------*/
-.modal button.btn-close {
+#iklanModal  button.btn-close {
   position: absolute;
   right: 6px;
   top: 6px;
   z-index: 1;
 }
-.modal-body {
+#iklanModal .modal-body {
   padding: 0;
 }
-.modal-dialog {
+#iklanModal .modal-dialog {
   width: 1000px;
   max-width: 90%;
+}
+.modal-dialog {
+  width: 600px;
+  max-width: 90%;
+}
+.modal-header {
+  padding: 15px 25px;
+}
+.modal-body {
+  padding: 20px 25px;
+}
+.modal-body ol, .modal-body ul {
+  padding-left: 20px;
 }
 @media(max-width:767px) {
   .modal-dialog {
     margin: 0 auto;
+  }
+  .modal-body {
+      padding: 20px 15px;
+  }
+  .modal-header {
+    padding: 15px 20px;
   }
 }
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+section#contact {
+  padding-bottom: 40px;
+}
 .contact .info {
   border-top: 3px solid #47b2e4;
   border-bottom: 3px solid #47b2e4;
@@ -1154,7 +1189,11 @@ div#maps-view iframe {
 }
 
 .contact .php-email-form .form-group {
-  padding-bottom: 8px;
+  padding-bottom: 0px;
+}
+
+.label-form {
+  color: #555;
 }
 
 .contact .php-email-form .validate {
@@ -1214,6 +1253,7 @@ div#maps-view iframe {
   padding-bottom: 4px;
   font-weight: 500;
   font-size: 11pt;
+  width: 100%;
 }
 
 .contact .php-email-form input,
@@ -1221,10 +1261,13 @@ div#maps-view iframe {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
-  border-radius: 0px;
+  border-radius: 4px;
 }
-.contact .php-email-form input[type="submit"]{
+.contact .php-email-form input[type="submit"] {
   border-radius: 100px;
+  background: #eb9b00;
+  border-color: #eb9b00;
+  font-weight: 600;
 }
 
 .contact .php-email-form input:focus,
@@ -1238,6 +1281,7 @@ div#maps-view iframe {
 
 .contact .php-email-form textarea {
   padding: 10px 12px;
+  height: 135px;
 }
 
 .contact .php-email-form button[type=submit] {
@@ -1251,6 +1295,13 @@ div#maps-view iframe {
 
 .contact .php-email-form button[type=submit]:hover {
   background: #209dd8;
+}
+@media(max-width:767px){
+  section#contact {
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 @keyframes animate-loading {
@@ -1268,29 +1319,36 @@ div#maps-view iframe {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  font-size: 14px;
-  background: transparent;
-  position: absolute;
+  font-size: 15px;
+  background: #f3f5fa;
+  position: relative;
   bottom: 0;
   width: 100%;
   left: 0;
 }
 
+footer#footer #snk {
+  color: #2f59a7;
+}
+
 #footer .footer-bottom {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  color: #fff;
+  /* padding-top: 15px;
+  padding-bottom: 15px; */
+  color: #333;
 }
 
 #footer .copyright {
   text-align: left;
-  /* color: transparent; */
+  color: #333;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 768px) {
   #footer .footer-bottom {
     padding-top: 20px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
   }
 
   #footer .copyright,
@@ -1301,5 +1359,8 @@ div#maps-view iframe {
 
   #footer .credits {
     padding-top: 4px;
+  }
+  footer#footer # snk {
+    margin-top: 4px;
   }
 }

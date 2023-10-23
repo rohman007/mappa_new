@@ -123,6 +123,7 @@ if(isset($_POST['simpan'])){
           <path d="M23.1667 8.66667H20.8333V6.33333H23.1667C23.4761 6.33333 23.7728 6.21042 23.9916 5.99162C24.2104 5.77283 24.3333 5.47609 24.3333 5.16667C24.3333 4.85725 24.2104 4.5605 23.9916 4.34171C23.7728 4.12292 23.4761 4 23.1667 4H16.1667C15.8572 4 15.5605 4.12292 15.3417 4.34171C15.1229 4.5605 15 4.85725 15 5.16667C15 5.47609 15.1229 5.77283 15.3417 5.99162C15.5605 6.21042 15.8572 6.33333 16.1667 6.33333H18.5V8.66667H9.16667V6.33333H11.5C11.8094 6.33333 12.1062 6.21042 12.325 5.99162C12.5437 5.77283 12.6667 5.47609 12.6667 5.16667C12.6667 4.85725 12.5437 4.5605 12.325 4.34171C12.1062 4.12292 11.8094 4 11.5 4H4.5C4.19058 4 3.89383 4.12292 3.67504 4.34171C3.45625 4.5605 3.33333 4.85725 3.33333 5.16667C3.33333 5.47609 3.45625 5.77283 3.67504 5.99162C3.89383 6.21042 4.19058 6.33333 4.5 6.33333H6.83333V8.66667H4.5C3.57174 8.66667 2.6815 9.03542 2.02513 9.69179C1.36875 10.3482 1 11.2384 1 12.1667C1 13.0949 1.36875 13.9852 2.02513 14.6415C2.6815 15.2979 3.57174 15.6667 4.5 15.6667H6.95C7.13694 16.56 7.53273 17.3964 8.105 18.1073C6.76651 18.3551 5.5568 19.0631 4.68537 20.1088C3.81393 21.1546 3.33565 22.4721 3.33333 23.8333C3.33333 24.1428 3.45625 24.4395 3.67504 24.6583C3.89383 24.8771 4.19058 25 4.5 25C4.80942 25 5.10616 24.8771 5.32496 24.6583C5.54375 24.4395 5.66667 24.1428 5.66667 23.8333C5.66667 22.9051 6.03542 22.0148 6.69179 21.3585C7.34817 20.7021 8.23841 20.3333 9.16667 20.3333H12.6667V22.6667C12.6667 22.9761 12.7896 23.2728 13.0084 23.4916C13.2272 23.7104 13.5239 23.8333 13.8333 23.8333C14.1428 23.8333 14.4395 23.7104 14.6583 23.4916C14.8771 23.2728 15 22.9761 15 22.6667V20.3333H18.5C19.4283 20.3333 20.3185 20.7021 20.9749 21.3585C21.6313 22.0148 22 22.9051 22 23.8333C22 24.1428 22.1229 24.4395 22.3417 24.6583C22.5605 24.8771 22.8572 25 23.1667 25C23.4761 25 23.7728 24.8771 23.9916 24.6583C24.2104 24.4395 24.3333 24.1428 24.3333 23.8333C24.331 22.4719 23.8525 21.1543 22.9809 20.1085C22.1092 19.0628 20.8992 18.3548 19.5605 18.1073C20.1332 17.3965 20.5294 16.5601 20.7167 15.6667H23.1667C24.0949 15.6667 24.9852 15.2979 25.6415 14.6415C26.2979 13.9852 26.6667 13.0949 26.6667 12.1667C26.6667 11.2384 26.2979 10.3482 25.6415 9.69179C24.9852 9.03542 24.0949 8.66667 23.1667 8.66667ZM23.1667 13.3333H19.6667C19.3572 13.3333 19.0605 13.4562 18.8417 13.675C18.6229 13.8938 18.5 14.1906 18.5 14.5C18.5 15.4283 18.1313 16.3185 17.4749 16.9749C16.8185 17.6313 15.9283 18 15 18H12.6667C11.7384 18 10.8482 17.6313 10.1918 16.9749C9.53541 16.3185 9.16667 15.4283 9.16667 14.5C9.16667 14.1906 9.04375 13.8938 8.82496 13.675C8.60616 13.4562 8.30942 13.3333 8 13.3333H4.5C4.19058 13.3333 3.89383 13.2104 3.67504 12.9916C3.45625 12.7728 3.33333 12.4761 3.33333 12.1667C3.33333 11.8572 3.45625 11.5605 3.67504 11.3417C3.89383 11.1229 4.19058 11 4.5 11H23.1667C23.4761 11 23.7728 11.1229 23.9916 11.3417C24.2104 11.5605 24.3333 11.8572 24.3333 12.1667C24.3333 12.4761 24.2104 12.7728 23.9916 12.9916C23.7728 13.2104 23.4761 13.3333 23.1667 13.3333ZM16.1667 14.5C16.1667 15.1188 15.9208 15.7123 15.4832 16.1499C15.0457 16.5875 14.4522 16.8333 13.8333 16.8333C13.2145 16.8333 12.621 16.5875 12.1834 16.1499C11.7458 15.7123 11.5 15.1188 11.5 14.5C11.5039 14.2694 11.5433 14.0408 11.6167 13.8222C11.6932 13.9958 11.8109 14.1481 11.9596 14.2659C12.1083 14.3838 12.2834 14.4636 12.4699 14.4984C12.6564 14.5333 12.8486 14.5221 13.0298 14.4659C13.211 14.4097 13.3758 14.3102 13.5098 14.1759C13.6439 14.0417 13.7431 13.8768 13.7991 13.6955C13.855 13.5142 13.8658 13.322 13.8307 13.1356C13.7956 12.9491 13.7155 12.7741 13.5974 12.6256C13.4794 12.4771 13.3269 12.3596 13.1532 12.2833C13.3728 12.2106 13.602 12.1712 13.8333 12.1667C14.4522 12.1667 15.0457 12.4125 15.4832 12.8501C15.9208 13.2877 16.1667 13.8812 16.1667 14.5Z" fill="white"/>
           </svg></button>
         <i class="bi bi-list mobile-nav-toggle"></i>
+        <div class="indonesia-flag"><img src="assets/img/indonesia-flag.jpg"></div>
       </nav><!-- .navbar -->
 
     </div>
@@ -336,51 +337,6 @@ if(isset($_POST['simpan'])){
     </section><!-- End Frequently Asked Questions Section -->
 
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="section-title">
-                    <h2>Contact</h2>
-                    <p class="text-muted">Kami Siap Membantu Anda dengan Informasi yang Anda Butuhkan.</p>
-                </div>
-            </div>
-          <div class="col-md-8 mt-0 mt-md-0 d-flex align-items-stretch">
-            <form action="" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-4">
-                  <label for="name">Nama</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-4">
-                  <label for="name">Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-                <div class="form-group col-md-4">
-                <label for="name">Nomor Telepon</label>
-                <input type="text" class="form-control" name="nohp" id="nohp" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Pesan</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-start"><input class="btn btn-primary mt-0 px-5" type="submit" name="simpan" value="Submit" id="butsave"></div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container" data-aos="fade-up">
@@ -398,29 +354,97 @@ if(isset($_POST['simpan'])){
       </div>
     </section><!-- End Cta Section -->
 
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="section-title">
+                    <h2>Contact</h2>
+                    <p class="text-muted">Kami Siap Membantu Anda dengan Informasi yang Anda Butuhkan.</p>
+                </div>
+            </div>
+          <div class="col-md-8 mt-0 mt-md-0 d-flex align-items-stretch">
+            <form action="" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-4">
+                  <label for="name">
+                    <div class="label-form">Nama</div>
+                    <input type="text" name="name" class="form-control" id="name" required>
+                  </label>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="name"><div class="label-form">Email</div>
+                    <input type="email" class="form-control" name="email" id="email" required>
+                  </label>
+                </div>
+                <div class="form-group col-md-4">
+                <label for="name"><div class="label-form">Nomor Telepon</div>
+                  <input type="text" class="form-control" name="nohp" id="nohp" required>
+                </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name"><div class="label-form">Pesan</div>
+                  <textarea class="form-control" name="message" rows="10" required></textarea>
+                </label>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-start"><input class="btn btn-primary mt-0 px-5" type="submit" name="simpan" value="Submit" id="butsave"></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container footer-bottom clearfix">
-      <div class="copyright">
+      <div class="copyright d-md-flex align-items-center justify-content-between">
         © Copyright 2023 Mappa
+        <button type="button" id="snk" class="border-0 bg-transparent ms-2" data-bs-toggle="modal" data-bs-target="#snkModal" fdprocessedid="l3vpp">Syarat & Ketentuan</button>
       </div>
     </div>
   </footer><!-- End Footer -->
   
   <!-- Modal Iklan-->
-<div class="modal fade" id="iklanModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="iklanModal" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      <div class="modal-body">
-        <img src="assets/img/iklan01.jpg" class="w-100">
+  <div class="modal fade" id="iklanModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="iklanModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+          <img src="assets/img/iklan01.jpg" class="w-100">
+        </div>
       </div>
     </div>
   </div>
-</div>
   <!-- End Modal Iklan-->
+
+  <!-- S&K Iklan-->
+  <div class="modal fade" id="snkModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="snkModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="mb-0">Syarat & Ketentuan</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+          <ol><li><p><strong>Lisensi Data:</strong> Pengguna mungkin diharuskan untuk setuju dengan lisensi yang mengatur penggunaan data geospasial yang mereka kontribusikan atau akses di platform. OSM, misalnya, menggunakan lisensi Open Database License (ODbL) untuk data yang disumbangkan.</p></li><li><p><strong>Kode Etik Kontribusi:</strong> Platform pemetaan mungkin memiliki kode etik atau panduan kontribusi yang harus diikuti oleh pengguna. Ini dapat mencakup pedoman untuk menambahkan, mengedit, atau memverifikasi data geospasial.</p></li><li><p><strong>Hak Cipta Kontribusi:</strong> Pengguna harus menerima bahwa data yang mereka kontribusikan akan dianggap bebas hak cipta dan dapat digunakan oleh siapa saja di bawah lisensi yang sesuai.</p></li><li><p><strong>Privasi dan Data Lokasi:</strong> S&amp;K mungkin mengatur penggunaan data lokasi dan informasi pribadi dalam kontribusi. Pengguna mungkin diharapkan untuk mematuhi hukum privasi yang berlaku.</p></li><li><p><strong>Larangan Konten Tidak Pantas:</strong> Platform pemetaan biasanya akan melarang konten yang tidak pantas, termasuk informasi palsu atau merugikan.</p></li><li><p><strong>Lisensi Penggunaan API:</strong> Jika platform pemetaan menyediakan API (Antarmuka Pemrograman Aplikasi) untuk pengguna, S&amp;K mungkin mencakup persyaratan penggunaan yang berlaku.</p></li><li><p><strong>Penyimpanan Data:</strong> S&amp;K mungkin mengatur berapa lama data yang diunggah atau disumbangkan akan disimpan dan kapan data tersebut dapat dihapus.</p></li><li><p><strong>Kewajiban Pengguna:</strong> Pengguna mungkin diharapkan untuk melaporkan kesalahan, pelanggaran, atau perubahan yang tidak sah dalam data serta menjaga kerahasiaan kata sandi dan informasi akun.</p></li><li><p><strong>Pemantauan dan Sanksi:</strong> Platform pemetaan biasanya memiliki hak untuk memantau aktivitas pengguna dan memberikan sanksi, termasuk pemblokiran akun, jika S&amp;K dilanggar.</p></li><li><p><strong>Perubahan S&amp;K:</strong> Seperti S&amp;K untuk situs web lainnya, platform pemetaan juga dapat mengubah S&amp;K, dan pengguna biasanya diharapkan untuk memeriksa S&amp;K secara berkala.</p></li><li><p><strong>Pengakuan Kontribusi:</strong> Beberapa platform pemetaan meminta pengguna untuk mengakui kontribusi mereka, yang dapat mencakup nama pengguna atau informasi serupa yang terlihat oleh pengguna lain.</p></li></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End S&K Iklan-->
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
