@@ -631,40 +631,19 @@ section {
 }
 
 .section-title {
-  text-align: center;
   padding-bottom: 30px;
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 32pt;
   font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 0.5rem;
+  padding-bottom: 3px;
   position: relative;
-  color: #37517e;
+  color: #000;
 }
-
-.section-title h2::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 120px;
-  height: 1px;
-  background: #ddd;
-  bottom: 1px;
-  left: calc(50% - 60px);
-}
-
-.section-title h2::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: #47b2e4;
-  bottom: 0;
-  left: calc(50% - 20px);
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
+  background: #4b7dc9;
 }
 
 .section-title p {
