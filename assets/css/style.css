@@ -277,8 +277,8 @@ h6 {
   display: block;
 }
 .indonesia-flag {
-  position: relative;
-  right: 0;
+  position: absolute;
+  left: 100%;
   width: 35px;
   margin-left: 10px;
 }
@@ -324,6 +324,10 @@ h6 {
 
   .navbar ul {
     display: none;
+  }
+  .indonesia-flag {
+    position: relative;
+    left: 0;
   }
 }
 
@@ -1076,7 +1080,7 @@ div#maps-view iframe {
   max-width: 90%;
 }
 .modal-dialog {
-  width: 600px;
+  width: 700px;
   max-width: 90%;
 }
 .modal-header {
