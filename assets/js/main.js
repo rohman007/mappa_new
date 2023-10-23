@@ -112,6 +112,7 @@
    */
   on('click', '.mobile-nav-toggle', function(e) {
     select('#navbar').classList.toggle('navbar-mobile')
+    select('body').classList.toggle('navbar-active')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
   })

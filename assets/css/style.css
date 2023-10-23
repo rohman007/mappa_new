@@ -412,7 +412,9 @@ section#notification {
   z-index: 999;
   background: #CEE2FF;
 }
-
+body.navbar-active #notification {
+  z-index: 0;
+}
 
 /*--------------------------------------------------------------
 # Hero Section
