@@ -113,9 +113,9 @@ if(isset($_POST['simpan'])){
           <li><a class="nav-link scrollto active" href="#hero">Dashboard</a></li>
           <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
           <li><a class="nav-link scrollto" href="#">Upload Data</a></li>
-          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
-          <li><a class="nav-link scrollto" href="#partner">Partner</a></li>
           <li><a class="nav-link scrollto" href="#map">Mappatile</a></li>
+          <li><a class="nav-link scrollto" href="#partner">Partner</a></li>
+          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a class="getstarted scrollto" href="https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=https%3A%2F%2Fmappa.id%2Fauth%2Fgoogle_login&client_id=269173757594-mgjhq8v6382icpk71beff3g2av4h6prf.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&access_type=online&approval_prompt=auto"><span class="material-symbols-outlined me-1">person</span>gLogin</a></li>
         </ul>
@@ -346,7 +346,7 @@ if(isset($_POST['simpan'])){
                     <p class="text-muted">Kami Siap Membantu Anda dengan Informasi yang Anda Butuhkan.</p>
                 </div>
             </div>
-          <div class="col-md-8 mt-5 mt-md-0 d-flex align-items-stretch">
+          <div class="col-md-8 mt-0 mt-md-0 d-flex align-items-stretch">
             <form action="" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-4">
@@ -371,7 +371,7 @@ if(isset($_POST['simpan'])){
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><input class="btn btn-primary mt-0" type="submit" name="simpan" value="Submit" id="butsave"></div>
+              <div class="text-start"><input class="btn btn-primary mt-0 px-5" type="submit" name="simpan" value="Submit" id="butsave"></div>
             </form>
           </div>
 
