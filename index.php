@@ -27,7 +27,7 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css?v=1" rel="stylesheet">
+  <link href="assets/css/style.css?v=11" rel="stylesheet">
 
 </head>
 <body>
@@ -117,7 +117,10 @@ if(isset($_POST['simpan'])){
           <li><a class="nav-link scrollto active" href="#hero">Dashboard</a></li>
           <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
           <li><a class="nav-link scrollto" href="#">Upload Data</a></li>
-          <li><a class="nav-link scrollto" href="https://mappa.id/main/ZONA">Mappatile</a></li>
+          <li>
+          <button type="button" id="formButton" class="nav-link drone-icon border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#formModal" fdprocessedid="l3vpp">Mappatile</button>
+          </li>
+          <!-- <li><a class="nav-link scrollto" href="https://mappa.id/main/ZONA">Mappatile</a></li> -->
           <li><a class="nav-link scrollto" href="#partner">Partner</a></li>
           <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -255,7 +258,7 @@ if(isset($_POST['simpan'])){
         <div class="row" data-aos="fade-in">
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+            <img src="assets/img/partner/logo-unjani.png" class="img-fluid" alt="UNIVERSITAS JENDERAL ACHMAD YANI" title="UNIVERSITAS JENDERAL ACHMAD YANI">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
@@ -427,6 +430,19 @@ if(isset($_POST['simpan'])){
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-body">
           <img src="assets/img/iklan01.jpg" class="w-100">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal Iklan-->
+
+  <!-- Modal Iklan-->
+  <div class="modal fade" id="formModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="formModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+          <iframe src="https://mappa.id/main/ZONA"></iframe>
         </div>
       </div>
     </div>
