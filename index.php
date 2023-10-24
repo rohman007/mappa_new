@@ -43,24 +43,28 @@ if(isset($_POST['simpan'])){
     require 'PHPMailer/class.phpmailer.php';
     require 'PHPMailer/class.smtp.php';
 
+    // require 'PHPMailer/PHPMailer.php';
+    // require 'PHPMailer/SMTP.php';
+    // require 'PHPMailer/Exception.php';
+
     // Buat objek PHPMailer
-    $mail = new PHPMailer;
+    $mail = new PHPMailer();
 
     // Konfigurasi SMTP
     $mail->isSMTP();
     $mail->SMTPDebug = 0; // 0 untuk non-debug, ganti dengan 2 untuk debugging
-    $mail->Host = 'mail.selembardaun.com'; // Ganti dengan server SMTP Anda
+    $mail->Host = 'smtp.gmail.com'; // Ganti dengan server SMTP Anda
     $mail->SMTPAuth = true;
-    $mail->Username = 'noreply@selembardaun.com'; // Ganti dengan alamat email Anda
-    $mail->Password = '!u@&vRN(jgNF'; // Ganti dengan kata sandi email Anda
-    $mail->SMTPSecure = 'ssl'; // Anda dapat menggunakan 'tls' atau 'ssl' tergantung pada kebutuhan
-    $mail->Port = 465; // Ganti dengan port SMTP yang sesuai
+    $mail->Username = 'a.nurrohman007@gmail.com'; // Ganti dengan alamat email Anda
+    $mail->Password = 'numvkmplabxzxugg'; // Ganti dengan kata sandi email Anda
+    $mail->SMTPSecure = 'tls'; // Anda dapat menggunakan 'tls' atau 'ssl' tergantung pada kebutuhan
+    $mail->Port = 587; // Ganti dengan port SMTP yang sesuai
 
     // Set alamat email pengirim
-    $mail->setFrom('noreply@selembardaun.com', 'MAPPA.ID');
+    $mail->setFrom('haniprijali007@gmail.com', 'MAPPA.ID');
 
     // Tambahkan alamat email penerima
-    $mail->addAddress('a.nurrohman007@gmail.com', 'Nama Penerima');
+    $mail->addAddress('a.nurrohman007@gmail.com');
 
     // Subjek email
     $mail->Subject = 'Pesan dari Kontak Form MAPPA.ID';
@@ -113,7 +117,7 @@ if(isset($_POST['simpan'])){
           <li><a class="nav-link scrollto active" href="#hero">Dashboard</a></li>
           <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
           <li><a class="nav-link scrollto" href="#">Upload Data</a></li>
-          <li><a class="nav-link scrollto" href="#map">Mappatile</a></li>
+          <li><a class="nav-link scrollto" href="https://mappa.id/main/ZONA">Mappatile</a></li>
           <li><a class="nav-link scrollto" href="#partner">Partner</a></li>
           <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -316,7 +320,7 @@ if(isset($_POST['simpan'])){
                 <li data-aos="fade-up" data-aos-delay="100">
                   <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Kenapa penampilan di pingir AOI putih/hitam? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></a>
                   <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                    <p> Pelajari cara  menbuat MBTILES di link berikut <a href="https://mappa.id/Cara_membuat_Tile_Map_MBTILES.pdf" target="cara">https://mappa.id/Cara_membuat_Tile_Map_MBTILES.pdf</a> </p>
+                    <p> Pelajari cara  menbuat MBTILES di link berikut <a href="Cara_membuat_Tile_Map_MBTILES.pdf" target="cara">https://mappa.id/Cara_membuat_Tile_Map_MBTILES.pdf</a> </p>
                   </div>
                 </li>
     
