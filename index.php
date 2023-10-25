@@ -17,10 +17,10 @@
 
   <!--====== Font Google ======-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Roboto+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Roboto+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/owlcarousel/owl.carousel.js"></script>
+  <script src="assets/vendor/owlcarousel/owl.carousel.js"></script>
 </head>
 <body>
 <?php
@@ -104,10 +104,10 @@ if(isset($_POST['simpan'])){
           });
         </script>";
     } else {
-        echo 'Email gagal terkirim. Error: ' . $mail->ErrorInfo;
+        echo 'Email gagal terkirim.';
     }
-}
-?>
+    }
+  ?>
   <section id="notification" class="text-center py-2 px-4">Selamat buat lutfi, 081316549997 sebagai kontributor mappa tembus 1 juta Ha.</section>
   <!-- ======= Header ======= -->
   
@@ -115,7 +115,7 @@ if(isset($_POST['simpan'])){
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html"><img src="assets/img/logo.png"></a></h1>
+      <h1 class="logo me-auto"><a href="#hero"><img src="assets/img/logo.png"></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -187,10 +187,7 @@ if(isset($_POST['simpan'])){
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
-        <div class="row content">
-          <div class="col-sm-5 image-about">
-            <img class="w-100" src="assets/img/about-image.jpg">
-          </div>
+        <div class="row content flex-row-reverse">
           <div class="col-sm-7 ps-sm-5">
             <h2>Tentang MAPPA ID</h2>
             <p>Mappa ID, platform open source untuk semua kalangan. Kami menyediakan ruang berbagi terutama data peta drone ortho dengan tujuan dapat dimanfaatkan untuk banyak pihak.</p>
@@ -245,6 +242,9 @@ if(isset($_POST['simpan'])){
                   </div>
                 </div>
             </div>
+          </div>
+          <div class="col-sm-5 image-about">
+            <img class="w-100" src="assets/img/about-image.jpg">
           </div>
         </div>
 
@@ -330,7 +330,10 @@ if(isset($_POST['simpan'])){
                 <li data-aos="fade-up" data-aos-delay="100">
                   <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Kenapa penampilan di pingir AOI putih/hitam? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></a>
                   <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                    <p> Pelajari cara  menbuat MBTILES di link berikut <a href="Cara_membuat_Tile_Map_MBTILES.pdf" target="cara">https://mappa.id/Cara_membuat_Tile_Map_MBTILES.pdf</a> </p>
+                  <p> Pelajari cara  menbuat MBTILES di link berikut 
+                      <button type="button" id="faqButton" class="text-primary drone-icon border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#faqModal" fdprocessedid="l3vpp">https://mappa.id/Cara_membuat_Tile_Map_MBTILES.pdf</button>
+                      <!-- <a href="Cara_membuat_Tile_Map_MBTILES.pdf" target="cara">https://mappa.id/Cara_membuat_Tile_Map_MBTILES.pdf</a>  -->
+                    </p>
                   </div>
                 </li>
     
@@ -451,7 +454,7 @@ if(isset($_POST['simpan'])){
   </div>
   <!-- End Modal Iklan-->
 
-  <!-- Modal Iklan-->
+  <!-- Modal From-->
   <div class="modal fade" id="formModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="formModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -462,7 +465,20 @@ if(isset($_POST['simpan'])){
       </div>
     </div>
   </div>
-  <!-- End Modal Iklan-->
+  <!-- End Modal From-->
+
+  <!-- Modal FAQ-->
+  <div class="modal fade" id="faqModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="faqModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+          <iframe src="Cara_membuat_Tile_Map_MBTILES.pdf"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal FAQ-->
 
   <!-- S&K Iklan-->
   <div class="modal fade" id="snkModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="snkModal" aria-hidden="true">
@@ -489,7 +505,7 @@ if(isset($_POST['simpan'])){
   <script src="assets/js/main.js"></script>
   <script>
     $(window).resize(function() {
-      $("#header").css({"padding-top": $("#notification").height() });
+      // $("#header").css({"padding-top": $("#notification").height() });
     });
     $(document).ready(function() {
       $('.owl-carousel').owlCarousel({

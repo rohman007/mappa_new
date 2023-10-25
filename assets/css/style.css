@@ -118,6 +118,7 @@ h6 {
   padding: 25px 0 15px;
   top: 0px;
   position: absolute;
+  background: rgb(43 79 146 / 95%);
 }
 
 #header.header-scrolled,
@@ -450,13 +451,26 @@ body.navbar-active #notification {
 #hero {
   width: 100%;
   height: 90vh;
-  background: url(../img/slider.jpg);
+  background: url(../img/slider.jpg?v=1);
   background-position: center;
   background-size: cover;
 }
 
 #hero .container {
-  padding-top: 72px;
+  /* padding-top: 72px; */
+  padding-top: 102px;
+  position: relative;
+}
+section#hero:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.25;
 }
 
 #hero h1 {
@@ -465,6 +479,7 @@ body.navbar-active #notification {
   font-weight: 700;
   line-height: 56px;
   color: #fff;
+  text-shadow: 0 0 19px BLACK;
 }
 
 #hero h1 span {
@@ -498,8 +513,10 @@ body.navbar-active #notification {
 }
 
 #hero p {
-    font-size: 13pt;
-    margin: 10px 0 30px;
+  font-size: 13pt;
+  margin: 10px 0 30px;
+  font-weight: 600;
+  text-shadow: 1px 2px 2px #000;
 }
 
 #hero .btn-get-started {
@@ -684,6 +701,12 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
       max-width: 1140px;
   }
 }
+@media(max-width:767px){
+  .section-title h2{font-size: 25pt;}
+  section {
+    padding: 40px 0;
+  }
+}
 
 
 /*--------------------------------------------------------------
@@ -701,9 +724,16 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
   margin-top: 10px;
   font-size: 33pt;
 }
-
+.image-about{
+  position: relative;
+}
 .image-about img {
-    border-radius: 0 80px;
+  border-radius: 0 80px;
+  object-fit: cover;
+  position: absolute;
+  height: 100%;
+  left: 15px;
+  width: calc(100% - 30px) !important;
 }
 
 .about p {
@@ -809,11 +839,11 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
   }
   .about .icon-box {
     padding: 30px 20px 20px;
-    margin-top: 80px;
+    margin-top: 70px;
   }
   .about h2 {
     margin-top: 0;
-    font-size: 29pt;
+    font-size: 25pt;
   } 
   .about .icon {
     margin-top: -64px;
@@ -843,7 +873,11 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
     height: 70px;
   }
   .image-about {
-    display: none;
+    height: 230px;
+    margin-top: 30px;
+  }
+  .image-about img {
+    border-radius: 20px;
   }
 }
 
@@ -1067,7 +1101,7 @@ div#maps-view iframe {
     padding-right: 10px;
 }
   .faq-heading h3 {
-    font-size: 28pt !important;
+    font-size: 25pt !important;
   }
   .faq .faq-list li > a {
     padding-right: 30px;
@@ -1166,6 +1200,20 @@ div#formModal .btn-close {
   z-index: 2;
 }
 div#formModal iframe{
+  width:100%;
+  height: 65vh;
+}
+
+/*--------------------------------------------------------------
+# Modal FAQ
+--------------------------------------------------------------*/
+div#faqModal .btn-close {
+  position: absolute;
+  right: 4px;
+  top: 5px;
+  z-index: 2;
+}
+div#faqModal iframe{
   width:100%;
   height: 65vh;
 }
