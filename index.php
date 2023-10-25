@@ -473,7 +473,7 @@ if(isset($_POST['simpan'])){
       <div class="modal-content">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-body">
-          <iframe src="Cara_membuat_Tile_Map_MBTILES.pdf?#zoom=67"></iframe>
+          <iframe src="Cara_membuat_Tile_Map_MBTILES.pdf?#zoom=75"></iframe>
         </div>
       </div>
     </div>
