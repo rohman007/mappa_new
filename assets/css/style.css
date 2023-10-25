@@ -1081,7 +1081,7 @@ div#maps-view iframe {
   position: absolute;
   right: 6px;
   top: 6px;
-  z-index: 1;
+  z-index: 2;
 }
 #iklanModal .modal-body {
   padding: 0;
@@ -1089,6 +1089,41 @@ div#maps-view iframe {
 #iklanModal .modal-dialog {
   width: 1000px;
   max-width: 90%;
+}
+#iklanModal .owl-nav {
+  position: fixed;
+  bottom: 30px;
+  left: auto;
+  width: 1150px;
+  /* max-width: 90%; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: -75px;
+  margin-top: -30px !important;
+}
+#iklanModal .owl-nav button span {
+  display: block !important;
+  position: relative;
+  top: -2px;
+}
+#iklanModal .owl-nav button:hover span{color:#000}
+#iklanModal .owl-nav button {
+  width: 60px;
+  height: 60px;
+  background: #fff !important;
+  border-radius: 50px !important;
+  font-size: 42pt !important;
+  line-height: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+#iklanModal .owl-dots {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 .modal-dialog {
   width: 700px;
@@ -1104,6 +1139,10 @@ div#maps-view iframe {
   padding-left: 20px;
 }
 @media(max-width:767px) {
+  #iklanModal .owl-nav {
+    max-width: 90%;
+    margin: 0;
+  }
   .modal-dialog {
     margin: 0 auto;
   }

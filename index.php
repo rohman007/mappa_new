@@ -25,10 +25,17 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/owlcarousel/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/owlcarousel/css/owl.theme.default.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css?v=11" rel="stylesheet">
 
+  <!-- Vendor JS Files -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/owlcarousel/owl.carousel.js"></script>
 </head>
 <body>
 <?php
@@ -159,7 +166,7 @@ if(isset($_POST['simpan'])){
 </div>
 
   <main id="main">
-
+  
     <!-- ======= Call Section ======= -->
     <section id="call" class="calls section-bg py-3">
       <div class="container">
@@ -429,7 +436,15 @@ if(isset($_POST['simpan'])){
       <div class="modal-content">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-body">
-          <img src="assets/img/iklan01.jpg" class="w-100">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <img src="assets/img/Broshure Mappa X1RTK Draf V1_001.jpg?v=1" class="w-100">
+            </div>
+            <div class="item">
+              <img src="assets/img/Broshure Mappa X1RTK Draf V1_002.jpg?v=1" class="w-100">
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -469,26 +484,22 @@ if(isset($_POST['simpan'])){
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-    const myButton = document.getElementById('droneButton');
-    const myModal  = document.getElementById('iklanModal');
-
-    const modal = new Modal(myModal); // Instantiates your modal
-
-    myButton.addEventListener('click', () => {
-        modal.show(); // shows your modal
-    });
     $(window).resize(function() {
-    $("#header").css({"padding-top": $("#notification").height() });
-  });
-
+      $("#header").css({"padding-top": $("#notification").height() });
+    });
+    $(document).ready(function() {
+      $('.owl-carousel').owlCarousel({
+        loop: false,
+        margin: 0,
+        responsiveClass: true,
+        items: 1,
+        nav: true
+      })
+    })
   </script>
 
 </body>
