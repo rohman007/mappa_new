@@ -478,6 +478,7 @@ section#hero:before {
   font-size: 52px;
   font-weight: 700;
   line-height: 56px;
+  text-transform: uppercase;
   color: #fff;
   text-shadow: 0 0 19px BLACK;
 }
@@ -937,12 +938,12 @@ div#maps-view iframe {
 .cta {
   background:linear-gradient(rgb(11 50 123 / 80%), rgb(11 23 46 / 90%)), url(../img/cta-bg.jpg) fixed center center;
   background-size: cover;
-  padding: 120px 0;
+  padding: 40px 0;
 }
 
 .cta h3 {
   color: #fff;
-  font-size: 33pt;
+  font-size: 21pt;
   font-weight: 700;
 }
 

@@ -148,12 +148,19 @@ if(isset($_POST['simpan'])){
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 text-white" data-aos="fade-up" data-aos-delay="200">
-          <h1>YOUR MAP<br/>
-            ENERGIZE THE NATION.<br/>
-            <span>SHARE IT!</span>
-          </h1>
-          <p class="text">Petamu, energi untuk negeri.<br>
-            Yuk Bagikan</p>
+           <?php         
+          // Array berisi beberapa teks acak
+          $data = array(
+            '<h1>YOUR MAP <br/>ENERGIZE THE NATION.<br/> <span>SHARE IT!</span></h1><p class="text">Petamu, energi untuk negeri. <br/>Yuk Bagikan</p>',
+            '<h1>Drop your map <br/><span>Update the nation.</span></h1><p class="text">Bagikan petamu, kinikan Indonesia</p>',
+          );
+          
+          // Use array_rand function to returns random key
+          $key = array_rand($data);
+          
+          // Display the random array element
+          echo $data[$key];
+          ?>
           <div class="d-sm-flex justify-content-center justify-content-lg-start">
             <a href="#" class="btn btn-primary">Upload Data</a>
             <a href="#" class="btn btn-outline">Dapatkan Info</a>
@@ -176,7 +183,7 @@ if(isset($_POST['simpan'])){
           <div class="col-12">
             <div class="d-sm-flex align-items-center justify-content-between">
               <h2 class="mb-0">Jangan ragu untuk berdiskusi bersama kami jika Anda memerlukan bantuan</h2>
-              <a href="https://api.whatsapp.com/send?phone=6281319640604&text=Hallo,..." class="btn btn-primary"><img src="assets/img/wa-icon.png" class="me-1">Contact Us</a>
+              <a href="https://api.whatsapp.com/send?phone=628999166561&text=Hallo,..." class="btn btn-primary"><img src="assets/img/wa-icon.png" class="me-1">Contact Us</a>
             </div>            
           </div>
         </div>
@@ -262,30 +269,13 @@ if(isset($_POST['simpan'])){
     <section id="partner" class="partners section-bg">
       <div class="container">
 
-        <div class="row" data-aos="fade-in">
+        <div class="row justify-content-center" data-aos="fade-in">
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/partner/logo-unjani.png" class="img-fluid" alt="UNIVERSITAS JENDERAL ACHMAD YANI" title="UNIVERSITAS JENDERAL ACHMAD YANI">
+            <img src="assets/img/partner/logo-unjani.png" class="img-fluid" alt="Universitas Jenderal Achmad Yani" title="Universitas Jenderal Achmad Yani">
           </div>
-
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+            <img src="assets/img/partner/logo-bpn.png" class="img-fluid" alt="Kementerian Agraria dan Tata Ruang/Badan Pertanahan Nasional" title="Kementerian Agraria dan Tata Ruang/Badan Pertanahan Nasional">
           </div>
 
         </div>
@@ -364,7 +354,7 @@ if(isset($_POST['simpan'])){
               Bagikan info yang anda miliki.</h3>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a href="https://api.whatsapp.com/send?phone=6281319640604&text=Hallo,..." class="cta-btn"><img src="assets/img/wa-icon.png" class="me-2">Contact Us</a>
+            <a href="https://api.whatsapp.com/send?phone=628999166561&text=Hallo,..." class="cta-btn"><img src="assets/img/wa-icon.png" class="me-2">Contact Us</a>
           </div>
         </div>
 
@@ -473,7 +463,7 @@ if(isset($_POST['simpan'])){
       <div class="modal-content">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-body">
-          <iframe src="Cara_membuat_Tile_Map_MBTILES.pdf?#zoom=75"></iframe>
+          <iframe src="Cara_membuat_Tile_Map_MBTILES_2023.pdf?#zoom=75"></iframe>
         </div>
       </div>
     </div>
